@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+
+
+        /**
+         * 1111111
+         */
+        print(1000, "first").then(function () {
+            return print(4000, "second");
+        }).then(function () {
+            print(3000,"third");
+        });
+
+        /**
+         * 2222222
+         * @returns {Promise<void>}
+         */
+        async function asyncFunc() {
+            await print(1000, "First");
+            await print(4000, "Second");
+            await print(3000, "Third");
+        }
+
+        function print(delay, message) {
+            return new Promise(function (resolve, reject) {
+                setTimeout(function () {
+                    console.log(message);
+                    resolve();//return value
+                },delay);
+            });
+        }
+        asyncFunc();
+    </script>
+</body>
+</html>

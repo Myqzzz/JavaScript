@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>点击循环person属性</p>
+<button onclick="myFunction()">click</button>
+<p id="demo"></p>
+<script>
+    function myFunction() {
+        var x, txt = "";
+        var person = {
+            fname: "Bill",
+            lname: "Gates",
+            age: 56
+        };
+        for(x in person)
+            txt=txt+person[x]+" ";
+        document.getElementById("demo").innerHTML=txt;
+    }
+</script>
+</body>
+</html>

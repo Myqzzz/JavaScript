@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+
+    <script>
+        /**
+         * 入口函数
+         * 1.$(document).ready(function () {});
+         * 2.$(function () {});
+         *
+         * 实例
+         * 1. 元素选择器
+         * 2. #id选择器
+         * 3. .class选择器
+         */
+        $(function () {
+            $("#bt1").click(function () {
+                $("p").hide();
+            });
+        });
+        $(document).ready(function () {
+            $("#bt2").click(function () {
+                $("#second").hide();
+            });
+        });
+        $(document).ready(function () {
+            $("#bt3").click(function () {
+                $(".test").hide();
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <h2 class="test">这是一个标题</h2>
+    <p class="test">这是一个段落。</p>
+    <p>这是第一个段落。</p>
+    <p id="second">这是第二个段落。</p>
+    <p>这是第三个段落。</p>
+    <button id="bt1">元素选择器</button>
+    <button id="bt2">id选择器</button>
+    <button id="bt3">.class选择器</button>
+
+</body>
+
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#bt1").click(function () {
+                alert("bk = "+$("p").css("background-color"));
+            });
+            $("#bt2").click(function () {
+                $("p").css("background-color","yellow");
+            });
+            $("#bt3").click(function () {
+                $("p").css({"background-color":"yellow","font-size":"200%"});
+            });
+        });
+
+    </script>
+</head>
+<body>
+<h2>这是一个标题</h2>
+<p style="background-color:#ff0000">这是一个段落。</p>
+<p style="background-color:#00ff00">这是一个段落。</p>
+<p style="background-color:#0000ff">这是一个段落。</p>
+<p>这是一个段落。</p>
+<button id="bt1">第一个 p 元素 background-color </button>
+<button id="bt2">设置 p 元素 background-color </button>
+<button id="bt3">设置 p 元素多个属性 </button>
+</body>
+</html>

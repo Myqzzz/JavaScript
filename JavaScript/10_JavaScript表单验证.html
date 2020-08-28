@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function validateForm() {
+            var x = document.forms["myForm"]["fname"].value;
+            if (x == null || x == "") {
+                alert("Please enter your name.");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+<!--JavaSccipt 表单验证-->
+<form name="myForm" action="../demo_form.php"
+      onsubmit="return validateForm()" method="post">
+    name：<input type="text" name="fname">
+    <input type="submit" value="submit">
+</form>
+
+<!--html 表单验证-->
+<form action="../demo_form.php" method="post">
+    name<input type="text" name="fname" required = "required">
+    <input type="submit" value="submit">
+</form>
+
+</body>
+</html>

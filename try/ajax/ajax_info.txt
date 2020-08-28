@@ -1,0 +1,3 @@
+AJAX is not a new programming language, but a new way to use existing standards.<br>
+
+AJAX is a technique for exchanging data with the server and updating parts of a Web page without reloading the entire page.

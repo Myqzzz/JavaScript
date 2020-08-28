@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="gbk">
+    <title>Title</title>
+</head>
+<body>
+
+<!--JSON解析实例-->
+<h2>JSON解析实例</h2>
+<p id="demo1"></p>
+<script>
+    /**
+     * JSON.parse(text[, reviver])
+     * @text - 必需， 一个有效的 JSON 字符串。
+     * @reviver - 可选，一个转换结果的函数， 将为对象的每个成员调用此函数。
+     *
+     */
+    var obj = JSON.parse('{"name":"runoob", "alexa":10000, "site":"www.runoob.com"}');
+    document.getElementById("demo1").innerHTML = obj.name + ":" + obj.site;
+</script>
+
+<!--服务器端获取JSON数据-->
+<h2>服务器端获取JSON数据</h2>
+<p id="demo2"></p>
+<script>
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            myObj = JSON.parse(this.responseText);
+            document.getElementById("demo2").innerHTML = myObj.name;
+        }
+    };
+    xmlhttp.open("GET","../try/ajax/json_demo.txt",true);
+    xmlhttp.send();
+</script>
+<a href="../try/ajax/ajax_info.txt" >xx</a>
+
+<!--服务器端获取JSON数组-->
+<h2>服务器端获取JSON数组</h2>
+<p id="demo3"></p>
+<script>
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if(this.readyState == 4 && this.status == 200){
+            myObj = JSON.parse(this.responseText);
+            document.getElementById("demo3").innerHTML = myObj[2];
+        }
+    };
+    xmlhttp.open("GET", "../try/ajax/json_demo_array.txt");
+    xmlhttp.send();
+</script>
+
+<!--解析数据-->
+<h2>将字符串转换为 Date 对象</h2>
+<p id="demo4"></p>
+<p id="demo5"></p>
+
+<script>
+    var text = '{ "name":"Runoob", "initDate":"2013-12-14", "site":"www.runoob.com"}';
+    var obj = JSON.parse(text);
+    obj.initDate = new Date(obj.initDate);
+    document.getElementById("demo4").innerHTML = obj.name + "创建日期: " + obj.initDate;
+
+    var objj = JSON.parse(text, function (key,value) {
+        if (key == "initDate") {
+            return new Date(value);
+        } else {
+            return  value;
+        }
+    });
+    document.getElementById("demo5").innerHTML = objj.name + "创建日期: " + objj.initDate;
+
+</script>
+
+<!--解析函数-->
+<h2>解析函数</h2>
+<p id = "demo6"></p>
+<script>
+    var text = '{ "name":"Runoob", "alexa":"function () {return 10000;}", "site":"www.runoob.com"}';
+    var obj = JSON.parse(text);
+    obj.alexa = eval("(" + obj.alexa + ")");
+    document.getElementById("demo6").innerHTML=obj.name+" Alexa : " +obj.alexa();
+</script>
+
+</body>
+</html>

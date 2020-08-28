@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+
+        /**
+         * @添加元素
+         * append() - 在被选元素的结尾插入内容
+         * prepend() - 在被选元素的开头插入内容
+         * after() - 在被选元素之后插入内容
+         * before() - 在被选元素之前插入内容
+         *
+         * notes:
+         * append/prepend 元素内部嵌入
+         * after/before 元素外面追加
+         */
+        $(document).ready(function () {
+            $("#bt1").click(function () {
+                $("p").append("追加文本");
+                $("p").prepend("开头插入文本");
+            });
+            $("#bt2").click(function () {
+                $("ol").append("<li>追加文本</li>");
+                $("ol").prepend("<li>开头插入文本</li>");
+            });
+        });
+
+        function afterText() {
+            var txt1 = "<b>I </b>";
+            var txt2 = $("<i></i>").text("love ");
+            var txt3 = document.createElement("big");
+            txt3.innerHTML="world!";
+            $("img").after(txt1,txt2,txt3);
+            $("img").before("ha");
+        }
+    </script>
+</head>
+<body>
+<p>这是一个段落。</p>
+<p>这是另外一个段落。</p>
+<ol>
+    <li>列表 1</li>
+    <li>列表 2</li>
+    <li>列表 3</li>
+</ol>
+<button id="bt1">添加文本</button>
+<button id="bt2">添加列表项</button><br><br>
+
+<img src="../images/logo.png">
+<button onclick="afterText()" id="bt3">之后插入</button>
+</body>
+</html>

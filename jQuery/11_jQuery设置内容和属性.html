@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#bt1").click(function () {
+                $("#test1").text("hello world!");
+            });
+            $("#bt2").click(function () {
+                $("#test2").html("<p>hello world!</p>");
+            });
+            $("#bt3").click(function () {
+                $("#test3").val("hello world!");
+            });
+            $("#bt4").click(function () {
+                $("#hrf").attr("href","https://www.qq.com/");
+            });
+            $("#bt5").click(function () {
+                $("#hrf").attr("href", function (i, prehrf) {
+                    return prehrf + "/"+i;
+                });
+            });
+        });
+
+    </script>
+</head>
+<body>
+<p id="test1">这是一个段落。</p>
+<p id="test2">这是另外一个段落。</p>
+<p ><a href="https://www.baidu.com/" id="hrf">ssss</a></p>
+<p>输入框: <input type="text" id="test3" value="菜鸟教程"></p>
+<button id="bt1">设置文本</button>
+<button id="bt2">设置 HTML</button>
+<button id="bt3">设置值</button>
+<button id="bt4">设置attr</button>
+<button id="bt5">回调</button>
+
+</body>
+</html>

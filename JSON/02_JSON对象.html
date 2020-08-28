@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="p1"></p>
+<p id="p2"></p>
+<p id="p3"></p>
+<p id="p4"></p>
+<p id="p5"></p>
+<!--    <div id="d"><p id="p">hello world </p></div>-->
+<script>
+    var myObj, x;
+    myObj = {
+        "name": "runoob",
+        "alexa": 10000,
+        "site": null
+    };
+    x = myObj["name"];
+    y = myObj.alexa;
+    document.getElementById("p1").innerHTML = x;
+    document.getElementById("p2").innerHTML = y;
+
+    for (x in myObj) {
+        document.getElementById("p3").innerHTML += x + " : " + myObj[x] + "<br>";
+    }
+    // var content = document.getElementById("d");
+    // alert(content.innerText);
+    // alert(content.innerHTML);
+</script>
+<script>
+    myObj = {
+        "name": "runoob",
+        "alexa": 10000,
+        "sites": {
+            "site1": "www.runoob.com",
+            "site2": "m.runoob.com",
+            "site3": "c.runoob.com",
+            "test": ["xxx", "yyy", "zzz"]
+        }
+    }
+    x = myObj.sites.site1;
+    y = myObj.sites["site2"];
+    // delete myObj.sites.site1;
+    // delete myObj.sites["site2"];
+    z = "";
+    document.getElementById("p4").innerHTML = x + "<br>" + y;
+    // for (i = 0; i < myObj.sites.test.length; i++)
+    for (i in myObj.sites["test"]) {
+        z += myObj.sites["test"][i] + "<br>";
+    }
+     document.getElementById("p5").innerHTML = z;
+
+</script>
+</body>
+</html>

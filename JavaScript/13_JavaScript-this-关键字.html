@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!---->
+<p><b>1. 对象方法中的this</b><br>
+    this -> person<br>
+    person对象是fullName方法的所有者
+</p>
+<p id="demo1"></p>
+<script>
+    var person = {
+        firstName: "John",
+        lastName: "Doe",
+        id: 5566,
+        fullName: function () {
+            return this.firstName + " " + this.lastName;
+        }
+    }
+    document.getElementById("demo1").innerHTML = person.fullName();
+</script>
+
+<!---->
+<p><b>2. 单独使用this</b><br>
+    this -> window<br>
+</p>
+<p id="demo2"></p>
+<script>
+    var x = this;
+    document.getElementById("demo2").innerHTML = x;
+</script>
+
+<!---->
+<p><b>3. 函数中使用this(默认)</b><br>
+    this -> window<br>
+    默认绑定到this上
+</p>
+<p id="demo3"></p>
+<script>
+    function myDemo3() {
+        return this;
+    }
+
+    document.getElementById("demo3").innerHTML = myDemo3();
+</script>
+
+<!---->
+<p><b>4. 函数中使用this(严格)</b><br>
+    this -> undefined<br>
+    没有绑定到this上
+</p>
+<p id="demo4"></p>
+<script>
+    "use strict";
+    function myDemo4() {
+        return this;
+    }
+    document.getElementById("demo4").innerHTML = myDemo4();
+</script>
+
+<!---->
+<p><b>5. 事件中的this</b><br>
+    this -> HTML<br>
+    this指向了接收事件的HTML元素
+</p>
+<button onclick="this.style.display ='none'">click to disappear</button>
+
+<p><b>6. this -> person2 , 即使是 person1的方法 </b></p>
+<p id = "demo6"></p>
+<script>
+    var person1 = {
+        fullName: function () {
+            return this.firstName + " " + this.lastName;
+        }
+    }
+    var person2 = {
+        firstName: "John",
+        lastName: "Doe",
+    }
+    var x = person1.fullName.call(person2);
+    document.getElementById("demo6").innerHTML = x;
+</script>
+
+</body>
+</html>

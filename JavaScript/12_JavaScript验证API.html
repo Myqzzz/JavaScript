@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p>1.checkValidity()</p>
+<p>如果输入的数字小于100或大于300，提示错误信息</p>
+<input id="id1" type="number" min="100" max="300" required>
+<button onclick="myFunction1()">verify</button>
+
+<p id="demo1"></p>
+<script>
+    function myFunction1() {
+        var inpObj = document.getElementById("id1");
+        if (inpObj.checkValidity() == false) {
+            document.getElementById("demo1").innerHTML = inpObj.validationMessage;
+        } else {
+            document.getElementById("demo1").innerHTML = "the input is correct.";
+        }
+    }
+</script>
+
+<p>2.rangeOverflow and rangeUnderflow</p>
+<p>如果输入数字大于100，提示错误信息</p>
+<input id="id2" type="number" min="0" max="100">
+<button onclick="myFunction2()">verify</button>
+<p id="demo2"></p>
+<script>
+    function myFunction2() {
+        var txt = "";
+        var inpObj = document.getElementById("id2");
+        if (!isNumberic(inpObj.value)) {
+            txt = "the value is not a number."
+        } else if (inpObj.validity.rangeOverflow) {
+            txt = "the value is too large.";
+        } else if (inpObj.validity.rangeUnderflow) {
+            txt = "the value is too small.";
+        } else {
+            txt = "the value is correct.";
+        }
+        document.getElementById("demo2").innerHTML = txt;
+    }
+    function isNumberic(n)
+    {
+        return !isNaN(parseFloat(n)) && isFinite(n);
+    }
+</script>
+<p></p>
+</body>
+</html>

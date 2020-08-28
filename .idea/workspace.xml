@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cf4c7868-9933-4389-b6f1-4a2685b2c1ab" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="XHTML File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProjectId" id="1gZv7B7XLuzVYDZzfoO1j4QfdXs" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Markdown" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\php2020\study\JavaScript\images" />
+      <recent name="F:\php2020\study\JavaScript" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\php2020\study\JavaScript\images" />
+      <recent name="F:\php2020\study\JavaScript\jQuery" />
+      <recent name="F:\php2020\study\JavaScript" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cf4c7868-9933-4389-b6f1-4a2685b2c1ab" name="Default Changelist" comment="" />
+      <created>1598334758517</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598334758517</updated>
+      <workItem from="1598334759550" duration="25277000" />
+      <workItem from="1598406080090" duration="85000" />
+      <workItem from="1598406184018" duration="16561000" />
+      <workItem from="1598500294536" duration="19839000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="924" y="198" key="#Inspections" timestamp="1598424818610">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="924" y="198" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1598424818610" />
+    <state x="958" y="191" key="#PHP" timestamp="1598357403440">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="958" y="191" key="#PHP/0.0.1920.1040@0.0.1920.1040" timestamp="1598357403440" />
+    <state x="530" y="204" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598423342062">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="530" y="204" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598423342062" />
+    <state x="936" y="368" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598335064725">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="936" y="368" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1598335064725" />
+    <state x="952" y="445" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1598335304951">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="952" y="445" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1598335304951" />
+    <state x="1061" y="312" key="FileChooserDialogImpl" timestamp="1598429297520">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1061" y="312" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1598429297520" />
+    <state width="220" height="477" key="HiddenNamespacesPopup" timestamp="1598423293291">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="220" height="477" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1598423293291" />
+    <state x="1035" y="284" key="NewPhpClassDialog" timestamp="1598424993836">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1035" y="284" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598424993836" />
+    <state x="1143" y="645" key="NewPhpFileDialog" timestamp="1598424981875">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1143" y="645" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598424981875" />
+    <state x="775" y="229" key="SettingsEditor" timestamp="1598406149275">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="775" y="229" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1598406149275" />
+    <state x="854" y="266" key="run.anything.popup" timestamp="1598533378485">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="854" y="266" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1598533378485" />
+    <state x="861" y="287" width="672" height="678" key="search.everywhere.popup" timestamp="1598516180267">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="861" y="287" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1598516180267" />
+  </component>
+</project>

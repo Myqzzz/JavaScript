@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function loadXMLDoc() {
+            var xmlhttp;
+            if (window.XMLHttpRequest) {
+                xmlhttp = new XMLHttpRequest();
+            } else {
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
+                }
+            }
+            /**
+             * GET请求
+             *   1.简单URL请求
+             *   2.向URL添加ID,避免得到的是缓存
+             *   3.向URL添加信息
+             */
+            // xmlhttp.open("GET","../try/ajax/demo_get.php",true);
+            // xmlhttp.open("GET","../try/ajax/demo_get.php?t="+Math.random(),true);
+            // xmlhttp.open("GET","../try/ajax/demo_get2.php?fname=Henry&lname=Ford",true);
+            /**
+             * POST请求
+             *  1.简单URL请求
+             *  2.向URL添加信息
+             */
+            // xmlhttp.open("POST","../try/ajax/demo_get.php",true);
+
+            xmlhttp.open("POST","../try/ajax/demo_get2.php",true);
+            xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+            xmlhttp.send("fname=Henry&lname=Ford");
+
+            // xmlhttp.send();
+        }
+
+    </script>
+</head>
+<body>
+    <h2>AJAX</h2>
+    <button type="button" onclick="loadXMLDoc()">请求数据</button>
+    <div id="myDiv"></div>
+</body>
+</html>

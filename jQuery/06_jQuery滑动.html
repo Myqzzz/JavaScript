@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <style type="text/css">
+        #panel,.flip
+        {
+            padding:5px;
+            text-align:center;
+            background-color:#e5eecc;
+            border:solid 1px #c3c3c3;
+        }
+        #panel
+        {
+            padding:50px;
+            display:none;
+        }
+    </style>
+    <script>
+        /**
+         * @函数
+         * $(selector).slideDown(speed,callback);
+         * $(selector).slideUp(speed,callback);
+         * $(selector).slideToggle(speed,callback);
+         * @speed : slow , fast , time
+         * @callback :fading 完成后执行函数名
+         *
+         *
+         */
+        $(document).ready(function () {
+            $("#flip1").click(function () {
+                $("#panel").slideDown("slow");
+            });
+            $("#flip2").click(function () {
+                $("#panel").slideUp("slow");
+            });
+            $("#flip3").click(function () {
+                $("#panel").slideToggle();
+            });
+
+        });
+    </script>
+</head>
+<body>
+<div >
+    <div class="flip" id="flip1" >滑下面板</div>
+    <div class="flip" id="flip2" >收起面板</div>
+    <div class="flip" id="flip3" >收起/滑下面板</div>
+</div>
+
+<div id="panel">Hello world!</div>
+</body>
+</html>

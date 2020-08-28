@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+
+        /**
+         * @函数
+         * remove() - 删除被选元素（及其子元素）
+         * empty() - 从被选元素中删除子元素
+         *
+         * notes:
+         * remove() 方法也可接受一个参数，允许您对被删元素进行过滤
+         */
+        $(function () {
+            $("#bt1").click(function () {
+                $("#div1").remove();
+            });
+            $("#bt2").click(function () {
+                $("#div2").empty();
+            });
+            $("#bt3").click(function () {
+                $("p").remove(".it");
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+<div id="div1" style="height:100px;width:300px;border:1px solid black;background-color:yellow;">
+    这是 div 中的一些文本。
+    <p>这是在 div 中的一个段落。</p>
+    <p>这是在 div 中的另外一个段落。</p>
+</div>
+<br><br><br>
+<div id="div2" style="height:100px;width:300px;border:1px solid black;background-color:yellow;">
+    这是 div 中的一些文本。
+    <p>这是在 div 中的一个段落。</p>
+    <p>这是在 div 中的另外一个段落。</p>
+</div>
+<br>
+
+<button id="bt1">remove</button>
+<button id="bt2">empty</button>
+<p>这是一个段落。</p>
+<p class="it"><i>这是另外一个段落。</i></p>
+<p class="it"><i>这是另外一个段落。</i></p>
+<button id="bt3">移除 class="it" p元素</button>
+</body>
+</html>

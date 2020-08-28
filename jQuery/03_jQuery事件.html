@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#bt1").click(function () {
+                $("#p1").hide();
+            });
+            $("#bt2").dblclick(function () {
+                $("#p1").show();
+            });
+            $("#p1").mouseenter(function () {
+                alert("move the mouse over p1");
+            });
+            $("#p1").mouseleave(function () {
+                alert("the mouse leaves p1");
+            });
+            $("#p2").mousedown(function () {
+                alert("mouse down");
+            });
+            $("#p3").mouseup(function () {
+                alert("the mouse is released");
+            });
+            $("#bt1").hover(
+                function(){
+                    alert("enter bt1!");
+                },
+                function(){
+                    alert("leave bt1!");
+                }
+            );
+            $("input").focus(function () {
+                $(this).css("background-color","#cccccc");
+            });
+            $("input").blur(function () {
+                $(this).css("background-color","#ffffff");
+            });
+        });
+    </script>
+</head>
+<body>
+Name: <input type="text" name="fullname"><br>
+Email: <input type="text" name="email">
+<p id="p1">如果你点我，我就会消失。</p>
+<p id="p2">继续点我!</p>
+<p id="p3">接着点我!</p>
+<button id="bt1">click</button>
+<button id="bt2">double click</button>
+</body>
+</html>

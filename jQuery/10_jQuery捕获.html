@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        /**
+         * @DOM操作
+         * @获取内容
+         * text():设置或返回所选元素的文本内容
+         * html():设置或返回所选元素的内容（包括 HTML 标记）
+         * val():设置或返回表单字段的值
+         * @获取属性
+         * attr():方法用于获取属性值。
+         */
+        $(function () {
+            $("#bt1").click(function () {
+                alert("Text: " + $("#test").text());
+            });
+            $("#bt2").click(function () {
+                alert("HTML: " + $("#test").html());
+            });
+            $("#bt3").click(function () {
+                alert("value: " + $("#ipt").val());
+            });
+            $("#bt4").click(function () {
+                alert("attr: "  + $("#hrf").attr("href"));
+            });
+        });
+
+    </script>
+</head>
+<body>
+<p id="test">这是段落中的 <b>粗体</b> 文本。</p>
+<button id="bt1">显示文本</button>
+<button id="bt2">显示 HTML</button>
+<button id="bt3">获取输入值</button>
+<button id="bt4">显示属性值</button><br>
+输入：<input type="text" id = "ipt"><br>
+<p><a href="https://www.baidu.com/" id="hrf">sss</a></p>
+</body>
+</html>
